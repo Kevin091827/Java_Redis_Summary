@@ -30,7 +30,7 @@ public class JedisKeyUtils {
      * 返回满足pattern表达式的所有key
      * keys(*)
      * 返回所有的key
-     * @param pattern
+     * @param pattern key表达式
      * @return
      */
     public static Set<String> keys(String pattern) {
