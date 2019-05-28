@@ -23,7 +23,7 @@ public class JedisSetUtils {
      * @param members 可以是一个String 也可以是一个String数组
      * @return 添加成功的个数
      */
-    public Long sadd(String key, String... members) {
+    public static Long sadd(String key, String... members) {
         return jedis.sadd(key, members);
     }
 
@@ -33,7 +33,7 @@ public class JedisSetUtils {
      * @param members 可以是一个String 也可以是一个String数组
      * @return 删除的个数
      */
-    public Long srem(String key, String... members) {
+    public static Long srem(String key, String... members) {
         return jedis.srem(key, members);
     }
 
@@ -42,7 +42,7 @@ public class JedisSetUtils {
      * @param key
      * @return
      */
-    public String spop(String key) {
+    public static String spop(String key) {
         return jedis.spop(key);
     }
 
@@ -52,7 +52,7 @@ public class JedisSetUtils {
      * @param keys 可以 是一个string 则返回set中所有的value 也可以是string数组
      * @return
      */
-    public Set<String> sdiff(String... keys) {
+    public static Set<String> sdiff(String... keys) {
         return jedis.sdiff(keys);
     }
 
@@ -63,7 +63,7 @@ public class JedisSetUtils {
      * @param keys   可以 是一个string 则返回set中所有的value 也可以是string数组
      * @return
      */
-    public Long sdiffstore(String dstkey, String... keys) {
+    public static Long sdiffstore(String dstkey, String... keys) {
         return jedis.sdiffstore(dstkey, keys);
     }
 
@@ -72,7 +72,7 @@ public class JedisSetUtils {
      * @param keys 可以 是一个string 也可以是一个string数组
      * @return
      */
-    public Set<String> sinter(String... keys) {
+    public static Set<String> sinter(String... keys) {
         return jedis.sinter(keys);
     }
 
@@ -82,7 +82,7 @@ public class JedisSetUtils {
      * @param keys   可以 是一个string 也可以是一个string数组
      * @return
      */
-    public Long sinterstore(String dstkey, String... keys) {
+    public static Long sinterstore(String dstkey, String... keys) {
         return jedis.sinterstore(dstkey, keys);
     }
 
@@ -91,7 +91,7 @@ public class JedisSetUtils {
      * @param keys 可以 是一个string 也可以是一个string数组
      * @return
      */
-    public Set<String> sunion(String... keys) {
+    public static Set<String> sunion(String... keys) {
         return jedis.sunion(keys);
     }
 
@@ -101,7 +101,7 @@ public class JedisSetUtils {
      * @param keys   可以 是一个string 也可以是一个string数组
      * @return
      */
-    public Long sunionstore(String dstkey, String... keys) {
+    public static Long sunionstore(String dstkey, String... keys) {
         return jedis.sunionstore(dstkey, keys);
     }
 
@@ -113,7 +113,7 @@ public class JedisSetUtils {
      * @param member set中的value
      * @return
      */
-    public Long smove(String srckey, String dstkey, String member) {
+    public static Long smove(String srckey, String dstkey, String member) {
         return jedis.smove(srckey, dstkey, member);
     }
 
@@ -122,7 +122,7 @@ public class JedisSetUtils {
      * @param key
      * @return
      */
-    public Long scard(String key) {
+    public static Long scard(String key) {
         return jedis.scard(key);
     }
 
@@ -132,7 +132,7 @@ public class JedisSetUtils {
      * @param member
      * @return
      */
-    public Boolean sismember(String key, String member) {
+    public static Boolean sismember(String key, String member) {
         return jedis.sismember(key, member);
     }
 
@@ -141,7 +141,7 @@ public class JedisSetUtils {
      * @param key
      * @return
      */
-    public String srandmember(String key) {
+    public static String srandmember(String key) {
         return jedis.srandmember(key);
     }
 
@@ -150,7 +150,7 @@ public class JedisSetUtils {
      * @param key
      * @return
      */
-    public Set<String> smembers(String key) {
+    public static Set<String> smembers(String key) {
         return jedis.smembers(key);
     }
 
