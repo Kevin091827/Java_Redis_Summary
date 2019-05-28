@@ -10,7 +10,7 @@
 
 * redis持久化 AOF和RDB
 
-* redis事务
+* redis事务 (完善)
 
 * redis消息发布订阅
 
@@ -33,4 +33,13 @@ com.kevin.redis
       .JedisSetUtils ： set工具类
       .JedisZsetUtils ；zset工具类
       .JedisUtils : jedis连接配置工具
+```
+
+
+### redis中的事务
+```yaml
+com.kevin.redis
+    .transaction 
+     .transaction.md : 事务
+
 ```
