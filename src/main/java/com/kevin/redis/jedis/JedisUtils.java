@@ -56,13 +56,4 @@ public class JedisUtils {
         }
     }
 
-    /**
-     * 获取所有key
-     * @return
-     */
-    public static Set<String> getAllKeys(){
-        return getJedis().keys("*");
-    }
-
-
 }
