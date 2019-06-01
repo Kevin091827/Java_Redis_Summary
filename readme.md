@@ -8,7 +8,7 @@
 
 * springboot集成redis -- redisTemplate使用
 
-* redis持久化 AOF和RDB
+* redis持久化 AOF和RDB（完善）
 
 * redis事务 (完善)
 
@@ -41,5 +41,14 @@ com.kevin.redis
 com.kevin.redis
     .transaction 
      .transaction.md : 事务
+
+```
+
+### redis持久化
+
+```yaml
+com.kevin.redis
+    .persistence
+     .persistence.md : redis持久化
 
 ```
