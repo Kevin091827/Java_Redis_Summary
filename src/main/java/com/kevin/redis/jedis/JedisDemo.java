@@ -34,7 +34,7 @@ public class JedisDemo {
      * 配置jedis连接池
      * @return
      */
-    @Bean
+   // @Bean
     public JedisPoolConfig getJedisPoolConfig(){
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         //连接池中最大连接数

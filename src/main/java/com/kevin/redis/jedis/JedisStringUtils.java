@@ -1,7 +1,6 @@
 package com.kevin.redis.jedis;
 
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.params.SetParams;
 
 import java.util.List;
 
@@ -48,10 +47,10 @@ public class JedisStringUtils {
      * @param value
      * @param expire
      */
-    public static void set(String key,String value,int expire){
-        CheckUtils.keyCheck(key);
-        jedis.set(key, value,new SetParams().px(expire));
-    }
+//    public static void set(String key,String value,int expire){
+//        CheckUtils.keyCheck(key);
+//        jedis.set(key, value,new SetParams().px(expire));
+//    }
 
     /**
      * 获取子字符串
