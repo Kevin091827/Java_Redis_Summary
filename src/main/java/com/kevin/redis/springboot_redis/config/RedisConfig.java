@@ -31,12 +31,12 @@ import org.springframework.data.redis.serializer.*;
 import java.time.Duration;
 
 /**
- * @Description:    redis配置类
- * @Author:         Kevin
- * @CreateDate:     2019/6/9 16:58
- * @UpdateUser:     Kevin
- * @UpdateDate:     2019/6/9 16:58
- * @UpdateRemark:   修改内容
+ * @Description: redis配置类
+ * @Author: Kevin
+ * @CreateDate: 2019/6/9 16:58
+ * @UpdateUser: Kevin
+ * @UpdateDate: 2019/6/9 16:58
+ * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
 @Configuration
@@ -48,10 +48,11 @@ public class RedisConfig extends CachingConfigurerSupport {
 
     /**
      * redisTemplate
+     *
      * @return
      */
     @Bean
-    public RedisTemplate redisTemplate(JedisConnectionFactory jedisConnectionFactory){
+    public RedisTemplate redisTemplate(JedisConnectionFactory jedisConnectionFactory) {
         FastJsonRedisSerializer redisSerializer = new FastJsonRedisSerializer(Object.class);
         //配置默认序列化
         redisTemplate.setDefaultSerializer(redisSerializer);

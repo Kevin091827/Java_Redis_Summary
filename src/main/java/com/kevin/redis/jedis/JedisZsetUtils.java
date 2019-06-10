@@ -5,12 +5,12 @@ import redis.clients.jedis.Jedis;
 import java.util.Set;
 
 /**
- * @Description:    Jedis Zset类型工具类
- * @Author:         Kevin
- * @CreateDate:     2019/5/28 13:12
- * @UpdateUser:     Kevin
- * @UpdateDate:     2019/5/28 13:12
- * @UpdateRemark:   修改内容
+ * @Description: Jedis Zset类型工具类
+ * @Author: Kevin
+ * @CreateDate: 2019/5/28 13:12
+ * @UpdateUser: Kevin
+ * @UpdateDate: 2019/5/28 13:12
+ * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
 public class JedisZsetUtils {
@@ -20,6 +20,7 @@ public class JedisZsetUtils {
     /**
      * 通过key向zset中添加value,score,其中score就是用来排序的
      * 如果该value已经存在则根据score更新元素
+     *
      * @param key
      * @param score
      * @param member
@@ -31,6 +32,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key删除在zset中指定的value
+     *
      * @param key
      * @param members 可以 是一个string 也可以是一个string数组
      * @return
@@ -41,6 +43,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key增加该zset中value的score的值
+     *
      * @param key
      * @param score
      * @param member
@@ -53,6 +56,7 @@ public class JedisZsetUtils {
     /**
      * 通过key返回zset中value的排名
      * 下标从小到大排序
+     *
      * @param key
      * @param member
      * @return
@@ -64,6 +68,7 @@ public class JedisZsetUtils {
     /**
      * 通过key返回zset中value的排名
      * 下标从大到小排序
+     *
      * @param key
      * @param member
      * @return
@@ -76,6 +81,7 @@ public class JedisZsetUtils {
      * 通过key将获取score从start到end中zset的value
      * socre从大到小排序
      * 当start为0 end为-1时返回全部
+     *
      * @param key
      * @param start
      * @param end
@@ -87,6 +93,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key返回指定score内zset中的value
+     *
      * @param key
      * @param max
      * @param min
@@ -98,6 +105,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key返回指定score内zset中的value
+     *
      * @param key
      * @param max
      * @param min
@@ -109,6 +117,7 @@ public class JedisZsetUtils {
 
     /**
      * 返回指定区间内zset中value的数量
+     *
      * @param key
      * @param min
      * @param max
@@ -120,6 +129,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key返回zset中的value个数
+     *
      * @param key
      * @return
      */
@@ -129,6 +139,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key获取zset中value的score值
+     *
      * @param key
      * @param member
      * @return
@@ -139,6 +150,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key删除给定区间内的元素
+     *
      * @param key
      * @param start
      * @param end
@@ -150,6 +162,7 @@ public class JedisZsetUtils {
 
     /**
      * 通过key删除指定score内的元素
+     *
      * @param key
      * @param start
      * @param end
@@ -158,7 +171,6 @@ public class JedisZsetUtils {
     public static Long zremrangeByScore(String key, double start, double end) {
         return jedis.zremrangeByScore(key, start, end);
     }
-
 
 
 }

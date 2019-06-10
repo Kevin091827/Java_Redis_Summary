@@ -22,7 +22,7 @@ public class RedisServiceImpl implements RedisService {
     public void insertUser(User user) {
         try {
             redisTemplate.opsForValue().set("uaadwadawdawdw", user);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("redis出错");
         }
     }

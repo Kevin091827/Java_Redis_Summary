@@ -7,12 +7,12 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @Description:    Jedis hash类型工具类
- * @Author:         Kevin
- * @CreateDate:     2019/5/28 13:56
- * @UpdateUser:     Kevin
- * @UpdateDate:     2019/5/28 13:56
- * @UpdateRemark:   修改内容
+ * @Description: Jedis hash类型工具类
+ * @Author: Kevin
+ * @CreateDate: 2019/5/28 13:56
+ * @UpdateUser: Kevin
+ * @UpdateDate: 2019/5/28 13:56
+ * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
 public class JedisHashUtils {

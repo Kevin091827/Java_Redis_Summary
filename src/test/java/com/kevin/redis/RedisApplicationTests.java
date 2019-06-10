@@ -30,7 +30,7 @@ public class RedisApplicationTests {
         User user = new User();
         user.setAge(12);
         user.setName("kevin");
-        redisTemplate.opsForValue().set("user6",user.toString());
+        redisTemplate.opsForValue().set("user6", user.toString());
         System.out.println(redisTemplate.opsForValue().get("user5"));
     }
 

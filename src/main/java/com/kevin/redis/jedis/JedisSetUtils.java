@@ -5,12 +5,12 @@ import redis.clients.jedis.Jedis;
 import java.util.Set;
 
 /**
- * @Description:    Jedis Set类型工具类
- * @Author:         Kevin
- * @CreateDate:     2019/5/28 13:12
- * @UpdateUser:     Kevin
- * @UpdateDate:     2019/5/28 13:12
- * @UpdateRemark:   修改内容
+ * @Description: Jedis Set类型工具类
+ * @Author: Kevin
+ * @CreateDate: 2019/5/28 13:12
+ * @UpdateUser: Kevin
+ * @UpdateDate: 2019/5/28 13:12
+ * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
 public class JedisSetUtils {
@@ -19,6 +19,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key向指定的set中添加value
+     *
      * @param key
      * @param members 可以是一个String 也可以是一个String数组
      * @return 添加成功的个数
@@ -29,6 +30,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key删除set中对应的value值
+     *
      * @param key
      * @param members 可以是一个String 也可以是一个String数组
      * @return 删除的个数
@@ -39,6 +41,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key随机删除一个set中的value并返回该值
+     *
      * @param key
      * @return
      */
@@ -49,6 +52,7 @@ public class JedisSetUtils {
     /**
      * 通过key获取set中的差集
      * 以第一个set为标准
+     *
      * @param keys 可以 是一个string 则返回set中所有的value 也可以是string数组
      * @return
      */
@@ -59,6 +63,7 @@ public class JedisSetUtils {
     /**
      * 通过key获取set中的差集并存入到另一个key中
      * 以第一个set为标准
+     *
      * @param dstkey 差集存入的key
      * @param keys   可以 是一个string 则返回set中所有的value 也可以是string数组
      * @return
@@ -69,6 +74,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key获取指定set中的交集
+     *
      * @param keys 可以 是一个string 也可以是一个string数组
      * @return
      */
@@ -78,6 +84,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key获取指定set中的交集 并将结果存入新的set中
+     *
      * @param dstkey
      * @param keys   可以 是一个string 也可以是一个string数组
      * @return
@@ -88,6 +95,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key返回所有set的并集
+     *
      * @param keys 可以 是一个string 也可以是一个string数组
      * @return
      */
@@ -97,6 +105,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key返回所有set的并集,并存入到新的set中
+     *
      * @param dstkey
      * @param keys   可以 是一个string 也可以是一个string数组
      * @return
@@ -119,6 +128,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key获取set中value的个数
+     *
      * @param key
      * @return
      */
@@ -128,6 +138,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key判断value是否是set中的元素
+     *
      * @param key
      * @param member
      * @return
@@ -138,6 +149,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key获取set中随机的value,不删除元素
+     *
      * @param key
      * @return
      */
@@ -147,6 +159,7 @@ public class JedisSetUtils {
 
     /**
      * 通过key获取set中所有的value
+     *
      * @param key
      * @return
      */

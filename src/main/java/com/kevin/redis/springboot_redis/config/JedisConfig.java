@@ -10,12 +10,12 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * @Description:    jedis连接池配置
- * @Author:         Kevin
- * @CreateDate:     2019/6/11 2:34
- * @UpdateUser:     Kevin
- * @UpdateDate:     2019/6/11 2:34
- * @UpdateRemark:   修改内容
+ * @Description: jedis连接池配置
+ * @Author: Kevin
+ * @CreateDate: 2019/6/11 2:34
+ * @UpdateUser: Kevin
+ * @UpdateDate: 2019/6/11 2:34
+ * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
 @Configuration
@@ -57,6 +57,7 @@ public class JedisConfig {
 
     /**
      * 连接池配置
+     *
      * @return
      */
     @Bean
@@ -85,6 +86,7 @@ public class JedisConfig {
 
     /**
      * 连接工厂
+     *
      * @return
      */
     @Bean
@@ -95,7 +97,7 @@ public class JedisConfig {
         redisStandaloneConfiguration.setPort(port);
         // 获得默认的连接池构造器
         JedisClientConfiguration.JedisPoolingClientConfigurationBuilder jpcb =
-                (JedisClientConfiguration.JedisPoolingClientConfigurationBuilder)JedisClientConfiguration.builder();
+                (JedisClientConfiguration.JedisPoolingClientConfigurationBuilder) JedisClientConfiguration.builder();
         // 指定jedisPoolConifig来修改默认的连接池构造器
         jpcb.poolConfig(getJedisPoolConfig());
         // 通过构造器来构造jedis客户端配置
