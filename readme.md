@@ -8,6 +8,8 @@
 
 * springboot集成redis -- redisTemplate使用(完善)
 
+* springboot整合springcache + redis（完善）
+
 * redis持久化 AOF和RDB（完善）
 
 * redis事务 (完善)
@@ -62,4 +64,14 @@ com.kevin.redis
         .RedisConfig :redis配置类
       .util
         .RedisUtils :redis工具类（redisTemplate）
+```
+
+### springboot整合springcache+redis
+```yaml
+com.kevin.redis
+    .springbootcache
+      .config
+        .CacheConfig :springcache配置类
+      .service
+        .SpringCacheServiceImpl : 基于注解实现缓存
 ```
