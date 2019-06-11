@@ -2,6 +2,7 @@ package com.kevin.redis.springboot_redis.service;
 
 import com.kevin.redis.springboot_redis.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -26,4 +27,5 @@ public class RedisServiceImpl implements RedisService {
             System.out.println("redis出错");
         }
     }
+
 }

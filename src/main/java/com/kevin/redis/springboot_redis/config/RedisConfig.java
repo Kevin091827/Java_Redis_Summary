@@ -1,30 +1,11 @@
 package com.kevin.redis.springboot_redis.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.Cache;
-import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.CachingConfigurerSupport;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.cache.interceptor.CacheErrorHandler;
-import org.springframework.cache.interceptor.CacheResolver;
-import org.springframework.cache.interceptor.KeyGenerator;
-import org.springframework.cache.interceptor.SimpleCacheErrorHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.cache.RedisCacheConfiguration;
-import org.springframework.data.redis.cache.RedisCacheManager;
-import org.springframework.data.redis.cache.RedisCacheWriter;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
-import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
-import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.*;
 
@@ -41,27 +22,28 @@ import java.time.Duration;
  */
 @Configuration
 @Slf4j
-public class RedisConfig extends CachingConfigurerSupport {
+public class RedisConfig {
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     /**
-     * redisTemplate
+     * redisTemplate配置
      *
      * @return
      */
     @Bean
     public RedisTemplate redisTemplate(JedisConnectionFactory jedisConnectionFactory) {
+        RedisSerializer<String> stringRedisSerializer = new StringRedisSerializer();
         FastJsonRedisSerializer redisSerializer = new FastJsonRedisSerializer(Object.class);
         //配置默认序列化
         redisTemplate.setDefaultSerializer(redisSerializer);
         redisTemplate.setEnableDefaultSerializer(true);
         //配置序列化策略
-        redisTemplate.setKeySerializer(redisSerializer);
+        redisTemplate.setKeySerializer(stringRedisSerializer);
         redisTemplate.setValueSerializer(redisSerializer);
         redisTemplate.setHashValueSerializer(redisSerializer);
-        redisTemplate.setHashKeySerializer(redisSerializer);
+        redisTemplate.setHashKeySerializer(stringRedisSerializer);
         redisTemplate.setConnectionFactory(jedisConnectionFactory);
         redisTemplate.afterPropertiesSet();
         return redisTemplate;

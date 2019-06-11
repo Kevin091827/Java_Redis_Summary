@@ -11,4 +11,5 @@ import com.kevin.redis.springboot_redis.entity.User;
 public interface RedisService {
 
     void insertUser(User user);
+
 }
