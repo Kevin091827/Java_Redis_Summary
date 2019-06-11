@@ -6,7 +6,7 @@
 
 * jedis操作redis（完善）
 
-* springboot集成redis -- redisTemplate使用
+* springboot集成redis -- redisTemplate使用(完善)
 
 * redis持久化 AOF和RDB（完善）
 
@@ -51,4 +51,15 @@ com.kevin.redis
     .persistence
      .persistence.md : redis持久化
 
+```
+
+### springboot2.x整合redis
+
+```yaml
+com.kevin.redis
+    .springboot_redis
+      .config
+        .RedisConfig :redis配置类
+      .util
+        .RedisUtils :redis工具类（redisTemplate）
 ```
